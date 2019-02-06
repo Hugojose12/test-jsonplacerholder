@@ -21,6 +21,11 @@ const api = {
 		},
 	},
 	users: {
+		async getUsers(id = 1) {
+			const responde = await fetch (`${baseUrl}/users`);
+			const data = await responde.json();
+			return data;
+		},
 		async getSingle(id = 1) {
 			const responde = await fetch (`${baseUrl}/users/${id}`);
 			const data = await responde.json();
