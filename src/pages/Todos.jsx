@@ -24,6 +24,12 @@ class Todos extends Component {
 	}
 
 	handleAddTodo(todo) {
+		const LengthTodos = this.state.todos.length
+
+		/* if (typeof todo.id === 'undefined'){
+			todo.id = this.state.todos[LengthTodos - 1].id + 1
+		}  */
+    		todo.id = this.state.todos[LengthTodos - 1].id + 1
 		this.setState({
 			todos: [...this.state.todos, todo]
 		})
