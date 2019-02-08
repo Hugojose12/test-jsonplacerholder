@@ -44,6 +44,19 @@ const api = {
 			return data;
 		},
 	},
+	gallery: {
+		async getAlbums(page = 1) {
+			const responde = await fetch (`${baseUrl}/albums?_page=${page}`);
+			const data = await responde.json();
+			return data;
+		},
+
+		async getPhotos(album =1) {
+			const responde = await fetch (`${baseUrl}/photos/?_albumId=${album}`);
+			const data = await responde.json();
+			return data;
+		},
+	},
 };
 
 export default api;
