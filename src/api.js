@@ -52,7 +52,7 @@ const api = {
 		},
 
 		async getPhotos(album =1) {
-			const responde = await fetch (`${baseUrl}/photos/?_albumId=${album}`);
+			const responde = await fetch (`${baseUrl}/photos/?albumId=${album}`);
 			const data = await responde.json();
 			return data;
 		},

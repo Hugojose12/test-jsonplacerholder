@@ -12,7 +12,7 @@ import Profile from '../pages/Profile';
 import Todos from '../pages/Todos';
 import Error404 from '../pages/Error404';
 import Gallery from '../pages/Gallery';
-import GalleryDetail from '../pages/GalleryDetail';
+import AlbumDetail from '../pages/AlbumDetail';
 
 const Menu = () => (
   <Router>
@@ -31,7 +31,7 @@ const Menu = () => (
         <Route path="/gallery" component={Gallery} />
         <Route path="/post/:id" component={PostDetail} />
         <Route path="/user/:id" component={Profile} />
-        <Route exact path="/album/:id/photos" component={GalleryDetail} />
+        <Route exact path="/album/:albumId/photos" component={AlbumDetail} />
         <Route component={Error404} />
       </Switch>
     </nav>
